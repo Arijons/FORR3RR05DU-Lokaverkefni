@@ -3,6 +3,7 @@ class Node:
         self.value = v
         self.left = None
         self.right = None
+        
 
     def insert(self,d):
         if self.value == d:
