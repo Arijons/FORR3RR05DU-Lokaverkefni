@@ -38,6 +38,14 @@ class Node:
         if self.right !=None:
             self.right.preOrderPrint()
     
+    def inOrderPrint(self):
+        if self.left !=None:
+            self.left.inOrderPrint()
+        print(self.value)
+        if self.right !=None:
+            self.right.inOrderPrint()
+
+    
     def postOrderPrint(self):
         if self.left !=None:
             self.left.postOrderPrint()
@@ -63,10 +71,16 @@ class Tree:
             return False
     
     def preOrderPrint(self):
-        if self.root != None:
+        if self.root !=None:
             return self.root.preOrderPrint()
         else:
             return 
+    
+    def inOrderPrint(self):
+        if self.root !=None:
+            return self.root.inOrderPrint()
+        else:
+            return
 
     def postOrderPrint(self):
         if self.root != None: 
@@ -95,7 +109,7 @@ class Tree:
             # 2.4: rótin á börn báðum megin
             else:
                 moveNode = self.root.right
-                moveNodeParent = None
+                moveNodeParent = self.root
                 while moveNode.left:
                     moveNodeParent = moveNode
                     moveNode = moveNode.left
@@ -169,7 +183,7 @@ t.insert(25)
 t.insert(35)
 print()
 t.delete(20)
-t.preOrderPrint()
+t.inOrderPrint()
 print()
 print(t.find(1))
 print(t.find(35))
