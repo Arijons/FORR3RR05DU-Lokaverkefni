@@ -3,7 +3,7 @@ class Node:
         self.value = v
         self.left = None
         self.right = None
-        
+
 
     def insert(self,d):
         if self.value == d:
@@ -75,22 +75,24 @@ class Tree:
             return
 
     def delete(self,d):
+        #1 tómt tré
         if self.root == None:
             return False
-
+        #2 drepa rót
+        #2.1 rótin á engin börn
         if self.root.value == d:
             if self.root.left == None and self.root.right == None:
                 self.root = None
                 return True
-        # 2: rótin á barn vinstra megin
+            #2.2: rótin á barn vinstra megin
             elif self.root.left and self.root.right is None:
                 self.root = self.root.left
                 return True
-          # 3:rótin á barn hægra megin
+            # 2.3:rótin á barn hægra megin
             elif self.root.left is None and self.root.right:
                 self.root = self.root.right
                 return True
-          # 4: rótin á börn báðum megin
+            # 2.4: rótin á börn báðum megin
             else:
                 moveNode = self.root.right
                 moveNodeParent = None
