@@ -188,6 +188,25 @@ class Tree:
                     moveNodeParent.right = None
             return True
 
+
+# Tímamælir
+import time
+
+    
+
+class Timer:
+    def __init__(self):
+        self._start_time = None
+
+    def start(self):
+        self._start_time = time.perf_counter()
+
+    def stop(self):
+        elapsed_time = time.perf_counter() - self._start_time
+        self._start_time = None
+        print(f"Liðin tími: {elapsed_time:0.4f} sekúndur")
+
+
 t = Tree()
 t.insert(20)
 t.insert(10)
@@ -210,3 +229,16 @@ t.revInOrder(0)
 
 print()
 
+
+L = [i for i in range(2000,0,-1)]
+print(L)
+
+k=Timer()
+
+k.start()
+r=Tree()
+for i in L:
+    r.insert(i)
+
+r.inOrderPrint()
+k.stop()
