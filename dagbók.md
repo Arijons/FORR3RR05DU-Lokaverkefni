@@ -8,4 +8,4 @@
 
 1. í dag bjó ég til nýtt fall sem heitir revInOrder sem prentar trén fallega en lárétt.
 2. Ég bjó til tímamælingafallið timer.
-3. Setti langan lista í tréð og mældi hverssu mikin tíma á það að hafa.
+3. Setti langan lista í tréð og mældi hverssu mikin tíma á það að raða.
