@@ -45,6 +45,16 @@ class Node:
         if self.right !=None:
             self.right.inOrderPrint()
 
+    def revInOrder(self,level):
+        if self.right !=None:
+            self.right.revInOrder(level+3)
+        for i in range(level): 
+            print(end = " ")
+        print(self.value)
+        print()
+        if self.left!=None: 
+            self.left.revInOrder(level+3)
+
     
     def postOrderPrint(self):
         if self.left !=None:
@@ -79,6 +89,12 @@ class Tree:
     def inOrderPrint(self):
         if self.root !=None:
             return self.root.inOrderPrint()
+        else:
+            return
+
+    def revInOrder(self,l):
+        if self.root != None:
+            return self.root.revInOrder(l)
         else:
             return
 
@@ -190,4 +206,7 @@ print(t.find(35))
 t.postOrderPrint()
 t.delete(17)
 print()
-t.postOrderPrint()
+t.revInOrder(0)
+
+print()
+
