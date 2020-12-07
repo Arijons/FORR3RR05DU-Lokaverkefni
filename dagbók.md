@@ -9,3 +9,7 @@
 1. í dag bjó ég til nýtt fall sem heitir revInOrder sem prentar trén fallega en lárétt.
 2. Ég bjó til tímamælingafallið timer.
 3. Setti langan lista í tréð og mældi hverssu mikin tíma á það að raða.
+
+7.12.20
+
+1. Í dag var ég að hugsa um algorriðma sem tekur binarytré og breytir í binary sem hefur lagmarkshæð hæð og er í jafnvægi. Þetta er flókið verkefni og ætla að reyna að klára á morgun.
