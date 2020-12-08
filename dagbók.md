@@ -13,3 +13,8 @@
 7.12.20
 
 1. Í dag var ég að hugsa um algorriðma sem tekur binarytré og breytir í binary sem hefur lagmarkshæð hæð og er í jafnvægi. Þetta er flókið verkefni og ætla að reyna að klára á morgun.
+
+8.12.20
+
+1. Í dag bjó ég til föll sem taka venjulegt tré og búa til nýtt tré sem er jafnvægis tré og er eins fáum hæðum og hægt er. 
+2. Svo lagaði ég keyrslu skránar, snirti og setti komment.
