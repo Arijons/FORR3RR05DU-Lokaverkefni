@@ -41,7 +41,7 @@ class Node:
     def inOrderPrint(self):
         if self.left !=None:
             self.left.inOrderPrint()
-        print(self.value)
+        print(self.value,end = ', ')
         if self.right !=None:
             self.right.inOrderPrint()
 
@@ -206,6 +206,39 @@ class Timer:
         self._start_time = None
         print(f"Liðin tími: {elapsed_time:0.4f} sekúndur")
 
+#Föll sem notuð eru til að búa til nýtt tré sem er í jafnvægi
+
+def storeBSTNodes(root,nodes):
+    if not root:
+        return
+    storeBSTNodes(root.left,nodes)
+    nodes.append(root)
+    storeBSTNodes(root.right,nodes)
+
+
+def buildTreeUtil(nodes,start,end): 
+      
+    if start>end: 
+        return None
+  
+    mid=(start+end)//2
+    node=nodes[mid] 
+  
+    node.left=buildTreeUtil(nodes,start,mid-1) 
+    node.right=buildTreeUtil(nodes,mid+1,end) 
+    return node 
+
+
+def buildTree(root):
+    nodes=[]
+    storeBSTNodes(root,nodes)
+    n=len(nodes)
+    return buildTreeUtil(nodes, 0, n-1)
+
+
+# keyrsluforritið ýmsar prófanir á tré
+
+#skilgreina tréið t 
 
 t = Tree()
 t.insert(20)
@@ -217,20 +250,26 @@ t.insert(30)
 t.insert(25)
 t.insert(35)
 print()
+
+#prófa delete
 t.delete(20)
 t.inOrderPrint()
 print()
+
+#prófa find 
 print(t.find(1))
 print(t.find(35))
 t.postOrderPrint()
 t.delete(17)
 print()
+
+#prenta  út fallegt tré
 t.revInOrder(0)
 
 print()
 
-
-L = [i for i in range(2000,0,-1)]
+#tímamæling 
+L = [i for i in range(500,0,-1)]
 print(L)
 
 k=Timer()
@@ -242,3 +281,22 @@ for i in L:
 
 r.inOrderPrint()
 k.stop()
+
+
+#breyta tréinu Tre í nyttTre 
+
+Tre=Tree()
+Tre.insert(10)
+Tre.insert(8)
+Tre.insert(7) 
+Tre.insert(6) 
+Tre.insert(5)
+Tre.insert(4)
+
+Tre.revInOrder(0)
+
+nyttTre = buildTree(Tre.root) 
+print("nýja jafnvægistréð er :") 
+nyttTre.revInOrder(0)
+
+
