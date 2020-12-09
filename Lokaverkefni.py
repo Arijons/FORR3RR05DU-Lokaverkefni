@@ -236,6 +236,22 @@ def buildTree(root):
     return buildTreeUtil(nodes, 0, n-1)
 
 
+# minnsta tala er tré
+
+
+
+def minValue(root): 
+    current = root 
+  
+    while(current.left is not None): 
+        current = current.left 
+    return current.value
+
+
+##########################################
+  # lok undirforrita 
+#########################################
+
 # keyrsluforritið ýmsar prófanir á tré
 
 #skilgreina tréið t 
@@ -299,4 +315,9 @@ nyttTre = buildTree(Tre.root)
 print("nýja jafnvægistréð er :") 
 nyttTre.revInOrder(0)
 
+# fundið minsta stak í tréð
+
+print ("minnsta gildi: ",minValue(Tre.root))
+
+####################
 
