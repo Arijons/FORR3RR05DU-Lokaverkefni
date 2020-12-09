@@ -18,3 +18,8 @@
 
 1. Í dag bjó ég til föll sem taka venjulegt tré og búa til nýtt tré sem er jafnvægis tré og er eins fáum hæðum og hægt er. 
 2. Svo lagaði ég keyrslu skránar, snirti og setti komment.
+
+9.12.20
+
+1. Snyrti readme.md 
+2. Setti inn algolithma sem finnur minsta stakið.
