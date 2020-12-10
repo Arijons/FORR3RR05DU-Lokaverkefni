@@ -8,7 +8,7 @@
 
 1. í dag bjó ég til nýtt fall sem heitir revInOrder sem prentar trén fallega en lárétt.
 2. Ég bjó til tímamælingafallið timer.
-3. Setti langan lista í tréð og mældi hverssu mikin tíma á það að raða.
+3. Setti langan lista í tréð og mældi hverssu mikin tíma á það að raða.  Athuga að ef of margir eru í listanum getur komið villa þar sem það er hámörk á hversu mörg regression má opna í einu.  Þá þarf bara að fækka aðeins hver margir eru í listanum L.
 
 7.12.20
 
